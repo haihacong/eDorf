@@ -1,0 +1,271 @@
+@font-face { font-family: Lobster; src: url('Lobster.ttf'); }
+@font-face { font-family: Raleway; src: url('Raleway.ttf'); }
+
+body {
+	background-color: white;
+	font-family: Lobster, cursive;
+	margin-left: 2%;
+	margin-right: 2%;
+}	
+
+.column {
+  float: left;
+  width: 49.5%;
+ 
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+   border-left: thick solid black;
+}
+
+.clearfix {
+	overflow: auto;
+}
+
+p, li, form {
+	font-family: Raleway;
+	font-size: 17;
+}
+
+blockquote {
+	font-family: Raleway;
+	font-size: 19;
+}
+
+li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.product {
+  position: relative;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.productimage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.product:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h1 {
+font-size: 40;
+}
+
+h2 {
+text-align: center;
+font-size: 32;
+}
+
+.button {
+  background-color: #2c778f;
+  border: none;
+  color: white;
+  padding: 15px 280px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: #d9f7f7 ;
+  text-decoration: bold;
+  cursor: pointer;
+}
+
+.buynow {
+	padding: 10;
+	background-color: #d9f7f7 ;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:  #6699ff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.welcome {
+  position: relative;
+  -webkit-animation-name: welcome; 
+  -webkit-animation-duration: 20s; 
+  -webkit-iteration-count: infinite;
+  animation-name: welcome;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes welcome {
+  0% {left:0%;}
+ 50% {left:80%;}
+ 100% {left:0%;}
+}
+
+@keyframes welcome {
+   0% {left:0%;}
+ 50% {left:80%;}
+ 100% {left:0%;}
+}
+
+.web {
+	border: none;
+	width: 80%;
+	height: 80%;
+	margin-left:10%;
+	padding-bottom: 25px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
